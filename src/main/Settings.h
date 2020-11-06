@@ -16,6 +16,11 @@
 #define BOARD_DEFAULT_SERVER          "blynk-cloud.com"     // Default server to connect to (Blynk App may override it)
 #define BOARD_DEFAULT_PORT            443                   // Default port
 
+//######## DJ CHANGES ###########
+#define BAUD_RATE 115200
+
+
+
 /*
  * Board configuration (see examples below).
  */
@@ -39,7 +44,7 @@
   #warning "NodeMCU board selected"
 
   // Example configuration for NodeMCU v1.0 Board
-  #define BOARD_BUTTON_PIN            0
+  #define BOARD_BUTTON_PIN            0 //D3
   #define BOARD_BUTTON_ACTIVE_LOW     true
 
   #define BOARD_LED_PIN_R             D8
@@ -76,7 +81,15 @@
 #else
   #error "No board selected"
 #endif
+//****CUSTOM BUTTON SETTINGS*******
 
+#define PRIMARY_BUTTON_HOLD_TIME_ACTION         10000
+#define PRIMARY_BUTTON_ACTIVE_LOW               true
+#define PRIMARY_BUTTON_PIN                      4 // GPIO4 D2
+
+#define SECONDARY_BUTTON_HOLD_TIME_ACTION       10000
+#define SECONDARY_BUTTON_ACTIVE_LOW             true
+#define SECONDARY_BUTTON_PIN                    5 // GPIO5 D1
 
 /*
  * Advanced options

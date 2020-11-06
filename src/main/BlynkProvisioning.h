@@ -17,6 +17,8 @@ extern "C" {
 #include "BlynkState.h"
 #include "ConfigStore.h"
 #include "ResetButton.h"
+#include "PrimaryButton.h"
+#include "SecondaryButton.h"
 #include "ConfigMode.h"
 #include "Indicator.h"
 #include "OTA.h"
@@ -76,6 +78,8 @@ public:
   {
     indicator_init();
     button_init();
+    primary_button_init();
+    secondary_button_init();
     config_init();
 
     printDeviceBanner();

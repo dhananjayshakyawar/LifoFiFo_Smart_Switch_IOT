@@ -36,6 +36,7 @@ void button_change(void)
       button_action();
     } else {
       // User action
+      DEBUG_PRINT("User Button was pressed...");
     }
     g_buttonPressTime = -1;
   }
